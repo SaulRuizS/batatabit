@@ -1,0 +1,406 @@
+/*
+    Como buena practica es recomendable seguir el siguiente orden a la hora de generar estilos:
+    
+        1-Posicionamiento
+        2-Modelo caja (Box Model)
+        3-Tipografia
+        4-Visuales
+        5-Otros
+*/
+
+:root {
+  --bitcoin_light_purple: #a783e0;
+  --soft_purple: #ddc8ff;
+  --secondary_blue: #42a9f3;
+  --soft_blue: #94c2e2;
+  --warm_black: #201e1c;
+  --warm_black_1: #282623;
+  --grey: #bababa;
+  --darker_grey: #3d3d3d;
+  --dark_grey: #505050;
+  --just_white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "DM Sans", "sans-serif";
+}
+
+/*Header*/
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  height: 334px;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    var(--warm_black) 1%,
+    var(--bitcoin_light_purple) 100%
+  );
+}
+
+header img {
+  width: 150px;
+  height: 24px;
+  margin-top: 60px;
+  align-self: center;
+}
+
+.header__tittle--container {
+  width: 90%;
+  min-width: 280px;
+  max-width: 900px;
+  height: 220px;
+  margin-top: 40px;
+  align-self: center;
+  text-align: center;
+}
+
+.header__tittle--container h1 {
+  font-size: 2.4rem;
+  margin: 0 auto auto 0;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just_white);
+}
+
+.header__tittle--container p {
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--soft_purple);
+}
+
+.header__button {
+  position: absolute;
+  left: calc(50% - 116px);
+  top: 270px;
+  margin-top: 34px;
+  padding: 14px;
+  width: 229px;
+  height: 46px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: var(--dark_grey);
+  color: var(--just_white);
+  box-shadow: 0px 4px 8px #272727;
+  border: none;
+  border-radius: 5px;
+}
+
+.header__button span {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url("./assets/icons/down-arrow_white.svg");
+}
+/*End of Header*/
+
+/*Main*/
+main {
+  width: 100%;
+  height: auto;
+  background-color: var(--darker_grey);
+}
+
+/*Exchange Desciption*/
+.exchange-container {
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.exchange-container__backgroundImg {
+  width: 195px;
+  height: 195px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-image: url("./assets/images/Bitcoin_purple.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.exchange-container__tittle {
+  width: 90%;
+  min-width: 280px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.exchange-container__tittle h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  margin-bottom: 24px;
+  color: var(--just_white);
+}
+
+.exchange-container__tittle p {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 48px;
+  color: #afafaf;
+}
+/*End of Exchange Description*/
+
+/*Tables*/
+.exchange-container__table-container {
+  width: 70%;
+  min-width: 235px;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  font-family: "Inter", "sans-serif";
+}
+
+.exchange-container__table-container .currency-table__tittle,
+.exchange-container__table-container .commission-table__tittle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+  margin-bottom: 15px;
+}
+
+.main-commission-table {
+  margin-top: 50px;
+}
+
+.exchange-container__table-container .currency-table__tittle {
+  color: var(--bitcoin_light_purple);
+}
+
+.exchange-container__table-container .commission-table__tittle {
+  color: var(--secondary_blue);
+}
+
+.currency-table__container,
+.commission-table__container {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.currency-table__container table,
+.commission-table__container table {
+  width: 100%;
+  height: 100%;
+}
+
+.currency-table__container td,
+.commission-table__container td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: var(--grey);
+  background-color: var(--dark_grey);
+}
+
+.currency-table__container .table__top-left,
+.commission-table__container .table__top-left {
+  border-top-left-radius: 8px;
+}
+
+.currency-table__container .table__top-right,
+.commission-table__container .table__top-right {
+  border-top-right-radius: 8px;
+}
+
+.currency-table__container .table__bottom-left,
+.commission-table__container .table__bottom-left {
+  border-bottom-left-radius: 8px;
+}
+
+.currency-table__container .table__bottom-right,
+.commission-table__container .table__bottom-right {
+  border-bottom-right-radius: 8px;
+}
+
+.currency-table__container .table__right,
+.commission-table__container .table__right {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: var(--just_white);
+}
+
+.currency-table__container .table__right .up-vector {
+  display: inline-block;
+  width: 12px;
+  height: 10px;
+  margin-left: 10px;
+  background-image: url(./assets/icons/trending-up.svg);
+}
+
+.currency-table__container .table__right .down-vector {
+  display: inline-block;
+  width: 12px;
+  height: 10px;
+  margin-left: 10px;
+  background-image: url(./assets/icons/trending-down.svg);
+}
+
+.currency-table__date,
+.commission-table__date {
+  width: 200px;
+  height: 35px;
+  border-radius: 8px;
+  margin: 10px auto;
+}
+
+.currency-table__date {
+  background-color: var(--soft_purple);
+}
+
+.commission-table__date {
+  background-color: var(--soft_blue);
+}
+
+.currency-table__date p,
+.commission-table__date p {
+  padding-top: 8px;
+  font-size: 1.4rem;
+}
+/*End of Currency Tables*/
+
+/*Benefits*/
+.benefits-container {
+  width: 100%;
+  min-width: 320px;
+  padding-bottom: 40px;
+  height: auto;
+  background-color: var(--warm_black);
+}
+
+.benefits-container .batata-icon {
+  padding-right: 41px;
+  padding-bottom: 25px;
+  position: relative;
+  left: calc(50% - 21px);
+  bottom: 13px;
+  background-image: url(./assets/icons/batata_purple.svg);
+  background-repeat: no-repeat;
+}
+
+.benefits-container .benefits-container__tittle {
+  width: 90%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.benefits-container .benefits-container__tittle h2 {
+  padding-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  font-family: "DM Sans", "sans-serif";
+  color: var(--just_white);
+}
+
+.benefits-container .benefits-container__tittle p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  font-family: "DM Sans", "sans-serif";
+  color: var(--grey);
+}
+
+.benefits-cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.benefits-cards-container .benefits-card {
+  width: 290px;
+  height: 150px;
+  position: relative;
+  left: calc(50% - 145px);
+  padding: 10px 15px;
+  margin-top: 20px;
+  background-color: var(--warm_black_1);
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 16);
+}
+
+.benefits-cards-container .benefits-card h3 {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: "DM Sans", "sans-serif";
+  color: var(--just_white);
+}
+
+.benefits-cards-container .benefits-card p {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  font-family: "DM Sans", "sans-serif";
+  color: var(--grey);
+}
+
+.benefits-cards-container .benefits-card span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+  background-repeat: no-repeat;
+}
+
+.benefits-card .first {
+  background-image: url(./assets/icons/clock_purple.svg);
+}
+
+.benefits-card .second {
+  background-image: url(./assets/icons/eye_purple.svg);
+}
+
+.benefits-card .third {
+  background-image: url(./assets/icons/dollar-sign_purple.svg);
+}
+
+.benefits-card .forth {
+  background-image: url(./assets/icons/check-circle_purple.svg);
+}
+/*End of Benefits*/
+
+/*Lady Image*/
+.bitcoin-lady-container h2 {
+  position: absolute;
+  left: calc(50% - 81px);
+  margin-top: 60px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  text-align: center;
+  color: var(--just_white);
+}
+
+.bitcoin-lady-img {
+  width: 100%;
+}
+/*End of Lady Image*/
