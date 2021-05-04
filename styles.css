@@ -336,12 +336,13 @@ main {
 }
 
 .benefits-cards-container .benefits-card {
-  width: 290px;
+  width: 70%;
+  min-width: 290px;
+  max-width: 520px;
   height: 150px;
   position: relative;
-  left: calc(50% - 145px);
   padding: 10px 15px;
-  margin-top: 20px;
+  margin: 10px auto;
   background-color: var(--warm_black_1);
   border-radius: 4px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 16);
@@ -439,14 +440,19 @@ main {
 }
 
 .plans-cards-container {
-  width: 70%;
-  min-width: 320px;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
 }
 
 .plan-card {
   text-align: center;
   padding-bottom: 50px;
+}
+
+.plan-card-anual {
+  position: relative;
+  bottom: 30px;
 }
 
 .plan-card__recommended {
@@ -466,9 +472,9 @@ main {
 }
 
 .plan-card__info {
-  width: 70%;
+  width: 40%;
   min-width: 220px;
-  max-width: 300px;
+  max-width: 320px;
   height: 270px;
   margin: 0 auto;
   background-color: var(--dark_grey);
@@ -527,6 +533,10 @@ main {
   border-color: var(--bitcoin_light_purple);
 }
 
+.plan-card__selection:hover {
+  background-color: #a783e0;
+}
+
 .plan-card__selection span {
   display: inline;
   margin-left: 15px;
@@ -540,9 +550,17 @@ main {
 
 /*Footer*/
 footer {
+  display: flex;
   width: 100%;
   height: 150px;
-  background-color: var(--bitcoin_light_purple);
+  background-color: #9a76d4;
+}
+
+footer section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
 }
 
 .footer__items {
@@ -552,10 +570,21 @@ footer {
   margin: 0 auto;
 }
 
-.links-container {
+.links-container li {
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-family: "DM Sans", "sans-serif";
 }
 
-.logo-container span {
-  background-image: url(./assets/icons/batata_purple.svg);
+.links-container a {
+  text-decoration: none;
+  color: #5f428f;
+}
+
+.logo-container img {
+  width: 75px;
+  height: 75px;
 }
 /*End of Footer*/

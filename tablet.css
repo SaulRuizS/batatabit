@@ -1,0 +1,29 @@
+.exchange-container__table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.main-commission-table,
+.main-currency-table {
+  margin: 0 50px;
+}
+
+.benefits-cards-container {
+  width: 930px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.benefits-cards-container .benefits-card {
+  width: 360px;
+  margin: 10px 20px;
+}
+
+.plans-cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
