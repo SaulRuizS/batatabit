@@ -1,8 +1,0 @@
-*.svg
-*.jpg
-./assets/*.svg
-./assets/*.png
-./assets/icons/*.png
-./assets/icons/*.svg
-./assets/images/*.png
-./assets/images/*.svg
